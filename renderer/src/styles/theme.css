@@ -1,0 +1,104 @@
+:root {
+    --bg-dark: #03060b;
+
+    --neon-green: #00ffb3;
+    --neon-cyan: #00eaff;
+
+    --glass-bg: rgba(8, 18, 28, 0.90);
+    --glass-border: rgba(0, 255, 180, 0.35);
+}
+
+/* Global reset */
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    background: var(--bg-dark);
+    color: #d9fff2;
+    font-family: "JetBrains Mono", monospace;
+    overflow: hidden;
+}
+
+/* PANEL BASE */
+/* ===============================
+   AI PANEL BORDER EFFECT
+   =============================== */
+
+.ai-panel {
+    height: 100%;
+    background: rgba(0, 8, 8, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 255, 200, 0.35);
+
+    /* Outer glow */
+    box-shadow:
+        0 0 18px rgba(0, 255, 200, 0.25),
+        0 0 40px rgba(0, 255, 200, 0.12),
+
+        /* Inner glow */
+        inset 0 0 20px rgba(0, 255, 200, 0.08);
+
+    backdrop-filter: blur(6px);
+}
+
+/* NEON BORDER LAYER */
+.ai-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    padding: 1.5px;
+    background: linear-gradient(120deg,
+            transparent,
+            var(--neon-green),
+            var(--neon-cyan),
+            transparent);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: borderFlow 6s linear infinite;
+    pointer-events: none;
+}
+
+/* OUTER GLOW */
+.ai-panel::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 16px;
+    box-shadow:
+        0 0 18px rgba(0, 255, 180, 0.35),
+        inset 0 0 20px rgba(0, 255, 180, 0.15);
+    pointer-events: none;
+}
+
+/* HEADER */
+.ai-panel-header {
+    padding: 10px 14px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--neon-green);
+    border-bottom: 1px solid rgba(0, 255, 180, 0.25);
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+/* BODY */
+.ai-panel-body {
+    flex: 1;
+    z-index: 1;
+}
+
+/* ANIMATION */
+@keyframes borderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}

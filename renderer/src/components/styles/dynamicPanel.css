@@ -1,0 +1,11 @@
+.dynamic-panel-root {
+    height: 100%;
+    width: 100%;
+    padding: 6px;
+
+    display: flex;
+    flex-direction: column;
+
+    /* background: rgba(0, 10, 14, 0.18); */
+    /* backdrop-filter: blur(14px); */
+}

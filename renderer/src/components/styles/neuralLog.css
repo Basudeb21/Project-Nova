@@ -1,0 +1,32 @@
+.neural-log-root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "JetBrains Mono", monospace;
+    color: #9fffe0;
+}
+
+/* Body */
+.neural-log-body {
+    flex: 1;
+    margin-top: 2px;
+    font-size: 0.65rem;
+    line-height: 1.4;
+    overflow-y: auto;
+}
+
+/* Lines */
+.neural-log-line {
+    display: flex;
+    gap: 6px;
+    padding: 2px 0;
+    opacity: 0.85;
+}
+
+.neural-log-line .prefix {
+    color: #00e5ff;
+}
+
+.neural-log-line .text {
+    color: #9fffe0;
+}

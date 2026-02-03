@@ -1,0 +1,122 @@
+/* Container */
+.task-planner {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 255, 180, 0.2);
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    color: #9fffe0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 12px rgba(0, 255, 180, 0.4);
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* Header */
+.tp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.tp-title {
+    letter-spacing: 1px;
+}
+
+.tp-add-btn {
+    background: rgba(0, 255, 180, 0.15);
+    border: 1px solid #00ffb2;
+    color: #00ffb2;
+    font-size: 0.9rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tp-add-btn:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 180, 0.6);
+}
+
+/* Subtitle */
+.tp-sub {
+    font-size: 0.65rem;
+    opacity: 0.6;
+    margin-bottom: 8px;
+}
+
+/* Task List */
+.tp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Individual task */
+.tp-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+    font-size: 0.75rem;
+}
+
+.tp-item:hover {
+    background: rgba(0, 255, 180, 0.08);
+}
+
+/* Priority dots */
+.tp-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.tp-item.high .tp-dot {
+    background: #ff5252;
+    box-shadow: 0 0 6px #ff5252;
+}
+
+.tp-item.medium .tp-dot {
+    background: #ffca28;
+    box-shadow: 0 0 6px #ffca28;
+}
+
+.tp-item.low .tp-dot {
+    background: #00e5ff;
+    box-shadow: 0 0 6px #00e5ff;
+}
+
+/* Done tasks */
+.tp-item.done {
+    color: #aaa;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.tp-item.done .tp-check {
+    color: #00ffb2;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Task text & due date */
+.tp-text {
+    flex: 1;
+}
+
+.tp-due {
+    font-size: 0.65rem;
+    opacity: 0.6;
+}

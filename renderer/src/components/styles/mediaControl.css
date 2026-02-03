@@ -1,0 +1,125 @@
+.media-root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    font-family: "JetBrains Mono", monospace;
+    color: #9fffe0;
+}
+
+/* Preview Area */
+.media-preview {
+    height: 160px;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 255, 180, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #00ffb2;
+}
+
+.media-preview.video {
+    box-shadow: inset 0 0 40px rgba(0, 255, 180, 0.15);
+}
+
+.media-preview.audio {
+    box-shadow: inset 0 0 30px rgba(0, 229, 255, 0.2);
+}
+
+/* Info */
+.media-info {
+    text-align: center;
+}
+
+.media-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #00ffb2;
+}
+
+.media-meta {
+    font-size: 0.6rem;
+    opacity: 0.6;
+}
+
+/* Controls */
+.media-controls {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.media-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 255, 180, 0.25);
+    color: #00ffb2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.media-btn.play {
+    width: 54px;
+    height: 54px;
+    background: rgba(0, 255, 180, 0.15);
+    font-size: 1.1rem;
+}
+
+.media-btn:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 180, 0.6);
+}
+
+/* Volume */
+.media-volume {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 18px;
+    font-size: 0.6rem;
+}
+
+.media-volume input {
+    flex: 1;
+    appearance: none;
+    height: 4px;
+    background: rgba(0, 255, 180, 0.25);
+    border-radius: 4px;
+}
+
+.media-volume input::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #00ffb2;
+    box-shadow: 0 0 6px rgba(0, 255, 180, 0.8);
+}
+
+/* Media Type Switch (temporary dev UI) */
+.media-type-switch {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.media-type-switch button {
+    font-size: 0.55rem;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 255, 180, 0.25);
+    color: #9fffe0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.media-type-switch button:hover {
+    box-shadow: 0 0 6px rgba(0, 255, 180, 0.5);
+}

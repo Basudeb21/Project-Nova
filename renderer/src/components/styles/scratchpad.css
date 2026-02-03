@@ -1,0 +1,99 @@
+:root {
+    --neon-green: #00ffb2;
+    --neon-cyan: #00e5ff;
+    --glass-line: rgba(255, 255, 255, 0.08);
+}
+
+/* ROOT — NO CARD */
+.scratch-root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "JetBrains Mono", monospace;
+    color: #d9fff1;
+}
+
+/* HEADER */
+.scratch-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--glass-line);
+    font-size: 0.75rem;
+}
+
+.scratch-header-title {
+    flex: 1;
+    cursor: text;
+    color: var(--neon-green);
+    user-select: none;
+    letter-spacing: 1px;
+}
+
+/* TITLE INPUT (BORDERLESS) */
+.scratch-header-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--neon-green);
+    font-size: 0.75rem;
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* ACTIONS */
+.scratch-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.scratch-btn {
+    background: rgba(0, 255, 180, 0.12);
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    padding: 4px 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.scratch-btn:hover {
+    box-shadow: 0 0 8px rgba(0, 255, 180, 0.6);
+    background: rgba(0, 255, 180, 0.2);
+}
+
+/* TEXTAREA — FLAT TERMINAL STYLE */
+.scratch-textarea {
+    flex: 1;
+    margin-top: 6px;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    color: var(--neon-green);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* PLACEHOLDER */
+.scratch-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* SCROLLBAR */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}

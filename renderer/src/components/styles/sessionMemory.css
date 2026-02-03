@@ -1,0 +1,79 @@
+.session-memory {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 255, 180, 0.15);
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    font-family: "JetBrains Mono", monospace;
+    color: #9fffe0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sm-header {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(0, 255, 180, 0.2);
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.sm-title {
+    color: #00ffb2;
+}
+
+.sm-sub {
+    font-size: 0.6rem;
+    opacity: 0.6;
+    padding: 4px 10px;
+    border-bottom: 1px solid rgba(0, 255, 180, 0.1);
+}
+
+.sm-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px 10px;
+}
+
+/* Individual session items */
+.sm-item {
+    display: grid;
+    grid-template-columns: 80px 120px 1fr;
+    gap: 6px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    cursor: default;
+}
+
+.sm-item:hover {
+    background: rgba(0, 255, 180, 0.05);
+}
+
+.sm-time {
+    font-size: 0.65rem;
+    opacity: 0.6;
+}
+
+.sm-module {
+    font-size: 0.7rem;
+    color: #00ffb2;
+}
+
+.sm-desc {
+    font-size: 0.7rem;
+    overflow-wrap: anywhere;
+}
+
+/* Optional: hide default scrollbars */
+.sm-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sm-list::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 255, 180, 0.4);
+    border-radius: 3px;
+}

@@ -1,0 +1,74 @@
+/* Container */
+.work-history {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 255, 180, 0.2);
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    color: #9fffe0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 12px rgba(0, 255, 180, 0.4);
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* Header */
+.wh-header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.wh-title {
+    letter-spacing: 1px;
+}
+
+/* Subtitle */
+.wh-sub {
+    font-size: 0.65rem;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+/* List */
+.wh-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+/* Individual item */
+.wh-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+    font-size: 0.75rem;
+}
+
+.wh-item:hover {
+    background: rgba(0, 255, 180, 0.08);
+}
+
+/* Time */
+.wh-time {
+    flex-shrink: 0;
+    width: 70px;
+    color: #00ffb2;
+    font-size: 0.7rem;
+    opacity: 0.8;
+    margin-right: 10px;
+}
+
+/* Action */
+.wh-action {
+    flex: 1;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}

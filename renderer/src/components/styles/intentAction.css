@@ -1,0 +1,127 @@
+.intent-panel {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    padding: 12px;
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    overflow: hidden;
+}
+
+.intent-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(0, 255, 180, 0.2);
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+    color: #00ffb2;
+}
+
+.intent-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.intent-label {
+    font-size: 0.6rem;
+    opacity: 0.7;
+}
+
+.intent-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #00ffb2;
+}
+
+.confidence-block {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.confidence-bar {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: #00ffb2;
+    border-radius: 3px 0 0 3px;
+    transition: width 0.3s ease;
+}
+
+.confidence-value {
+    font-size: 0.65rem;
+    opacity: 0.7;
+    min-width: 30px;
+    text-align: right;
+}
+
+.action-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.steps-title {
+    font-size: 0.65rem;
+    opacity: 0.7;
+    margin-bottom: 4px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.65rem;
+    padding: 4px 6px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.step-icon {
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step .spin {
+    animation: spin 1s linear infinite;
+}
+
+.step.done .step-text {
+    color: #00ffb2;
+}
+
+.step.running .step-text {
+    color: #ffaa00;
+}
+
+.step.pending .step-text {
+    color: #ff5252;
+}
+
+/* Spin animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,153 @@
+/* ===============================
+   ROOT + GLOBAL
+   =============================== */
+
+:root {
+    --bg-dark: #03060b;
+    --neon-green: #00ffb3;
+    --neon-cyan: #00eaff;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    background: var(--bg-dark);
+    color: #d9fff2;
+    font-family: "JetBrains Mono", monospace;
+    overflow: hidden;
+}
+
+/* ===============================
+   SCREEN + VIDEO
+   =============================== */
+
+.ai-screen-root {
+    position: relative;
+    height: 100vh;
+    padding: 14px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ai-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.45) saturate(1.2);
+}
+
+/* ===============================
+   LAYOUT
+   =============================== */
+
+.ai-layout {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ai-top-row {
+    height: 70%;
+    min-height: 0;
+}
+
+.ai-bottom-row {
+    height: 30%;
+    min-height: 0;
+}
+
+.row,
+.col-4 {
+    min-height: 0;
+}
+
+/* ===============================
+   🔥 AI PANEL (SINGLE SOURCE)
+   =============================== */
+
+.ai-panel {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(6, 16, 18, 0.88);
+    border-radius: 2px;
+
+    /* IMPORTANT: allow glow */
+    overflow: visible;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 20px rgba(0, 255, 200, 0.28),
+        0 0 45px rgba(0, 255, 200, 0.15),
+        inset 0 0 22px rgba(0, 255, 200, 0.12);
+}
+
+/* Neon border */
+.ai-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    pointer-events: none;
+
+    border: 1px solid rgba(0, 255, 200, 0.45);
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 200, 0.45),
+        0 0 28px rgba(0, 255, 200, 0.25);
+
+    animation: neonPulse 3s ease-in-out infinite;
+}
+
+/* Header */
+.ai-panel-header {
+    padding: 10px 14px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--neon-green);
+    border-bottom: 1px solid rgba(0, 255, 180, 0.25);
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+/* Body */
+.ai-panel-body {
+    flex: 1;
+    padding: 12px;
+    z-index: 1;
+}
+
+/* ===============================
+   ANIMATION
+   =============================== */
+
+@keyframes neonPulse {
+    0% {
+        box-shadow:
+            0 0 12px rgba(0, 255, 200, 0.35),
+            0 0 22px rgba(0, 255, 200, 0.15);
+    }
+
+    50% {
+        box-shadow:
+            0 0 24px rgba(0, 234, 255, 0.65),
+            0 0 44px rgba(0, 234, 255, 0.3);
+    }
+
+    100% {
+        box-shadow:
+            0 0 12px rgba(0, 255, 200, 0.35),
+            0 0 22px rgba(0, 255, 200, 0.15);
+    }
+}
