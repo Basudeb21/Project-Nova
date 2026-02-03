@@ -1,0 +1,19 @@
+{
+  "name": "nova-ai",
+  "version": "1.0.0",
+  "description": "Desktop AI assistant",
+  "license": "ISC",
+  "author": "Basudeb Paul Chowdhury",
+  "type": "commonjs",
+  "main": "./electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electronmon ."
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "electron": "^40.0.0",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electronmon": "^2.0.4"
+  }
+}
